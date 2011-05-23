@@ -6,12 +6,12 @@ Vagrant::Config.run do |config|
   # box = "rhel60_64"
   # box = "centos4_64"
   box = "centos56_64"
-  url = "http://faro.puppetlabs.lan/vagrant"
+  url = "http://https://puppetlabs.s3.amazonaws.com/pub"
 
   # What internal network should these hosts be on? (24 bit network)
   network = "172.20.10"
 
-  config.vm.define :master do |node|
+  config.vm.define :puppet10 do |node|
     node.vm.box = "#{box}"
     node.vm.box_url = "#{url}/#{box}.box"
     node.vm.customize do |vm|
