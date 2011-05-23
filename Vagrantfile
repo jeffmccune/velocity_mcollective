@@ -1,15 +1,28 @@
 require 'yaml'
 
+begin
+  require 'facter'
+  FACTER_LOADED = true
+rescue LoadError
+  FACTER_LOADED = false
+end
+
+@dnsdomain = FACTER_LOADED ? Facter[:domain].value : 'UNKNOWN'
+@at_puppetlabs = @dnsdomain =~ /puppetlabs.lan$/ ? true : false
+
 Vagrant::Config.run do |config|
 
   # Change this box name depending on the system you want.
   # box = "rhel60_64"
   # box = "centos4_64"
   box = "centos56_64"
-  url = "http://https://puppetlabs.s3.amazonaws.com/pub"
+  url = @at_puppetlabs ? "http://faro.puppetlabs.lan/vagrant" : "http://https://puppetlabs.s3.amazonaws.com/pub"
 
   # What internal network should these hosts be on? (24 bit network)
   network = "172.20.10"
+
+  # Boot with a GUI so you can see the screen. (Default is headless)
+  # config.vm.boot_mode = :gui
 
   config.vm.define :puppet10 do |node|
     node.vm.box = "#{box}"
