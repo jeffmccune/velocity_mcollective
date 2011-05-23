@@ -24,6 +24,14 @@ Vagrant::Config.run do |config|
   # Boot with a GUI so you can see the screen. (Default is headless)
   # config.vm.boot_mode = :gui
 
+  # This will provision the box using puppet
+  config.vm.provision :puppet do |puppet|
+    puppet.options        = "-v --vardir=/var/lib/puppet --ssldir=/var/lib/puppet/ssl"
+    puppet.module_path    = "modules"
+    puppet.manifests_path = "manifests"
+    puppet.manifest_file  = "site.pp"
+  end
+
   config.vm.define :puppet10 do |node|
     node.vm.box = "#{box}"
     node.vm.box_url = "#{url}/#{box}.box"

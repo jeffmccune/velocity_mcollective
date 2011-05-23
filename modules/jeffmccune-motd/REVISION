@@ -1,0 +1,4 @@
+module: jeffmccune/motd
+version: 1.0.3
+url: file:///Users/jeff/.puppet/var/puppet-module/cache/http_forge_puppetlabs_com-75a31f1d6f1ef6eb63b4479b3512ee1508209a7f/jeffmccune-motd-1.0.3.tar.gz
+installed: Mon May 23 14:10:10 -0700 2011
