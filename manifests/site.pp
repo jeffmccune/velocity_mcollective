@@ -1,6 +1,6 @@
 node default {
 
-  include stages
+  include stdlib
   include motd
 
   class { 'puppetlabs_repos': stage => 'setup' }

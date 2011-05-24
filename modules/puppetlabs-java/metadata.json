@@ -1,26 +1,30 @@
 {
-  "project_page": "UNKNOWN",
-  "license": "UNKNOWN",
+  "project_page": "https://github.com/puppetlabs/puppetlabs-java",
+  "license": "Apache",
   "types": [
 
   ],
   "checksums": {
     "spec/spec_helper.rb": "ca19ec4f451ebc7fdb035b52eae6e909",
+    "CHANGELOG": "aa5841f4161c4e11d1f051aae88aaffe",
     "manifests/jre_package.pp": "5f48276f839bce907249837d513ddf76",
     "tests/init.pp": "01ed568a64f272ad728054341a562406",
-    "README.markdown": "97bed985bc926f5dd5f0e2878853d6b1",
+    "README.markdown": "0c21c1ba111c236cdb0e0c52ef039f3b",
     "spec/spec.opts": "a600ded995d948e393fbe2320ba8e51c",
     "metadata.json": "d34d0b70aba36510fbc2df4e667479ef",
-    "Modulefile": "dad9688c6590b1b9da78cebd92b89b82",
-    "manifests/init.pp": "596f50625ce84e441bc39f8d765a0253"
+    "Modulefile": "8eb4d375dec3118e1a2cf2090a92714c",
+    "manifests/init.pp": "dbb14711df2980e8ba3600dd133cfc1b"
   },
-  "summary": "UNKNOWN",
-  "source": "UNKNOWN",
-  "description": "UNKNOWN",
+  "summary": "Manage the official Java runtime",
+  "source": "git://github.com/puppetlabs/puppetlabs-java",
+  "description": "Manage the official Java runtime",
   "author": "puppetlabs",
   "name": "puppetlabs-java",
   "version": "0.0.1",
   "dependencies": [
-
+    {
+      "version_requirement": ">= 0.1.2",
+      "name": "puppetlabs/stdlib"
+    }
   ]
 }
