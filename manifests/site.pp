@@ -9,7 +9,8 @@ node default {
 
 node /^puppet/ inherits default {
 
-  class { 'java': version => '1.6.0_25-fcs' }
+  class { 'java': }
+  class { 'activemq': }
 
 }
 

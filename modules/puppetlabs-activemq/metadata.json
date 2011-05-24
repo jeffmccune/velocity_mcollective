@@ -1,0 +1,72 @@
+{
+  "project_page": "https://github.com/puppetlabs/puppetlabs-activemq",
+  "license": "Apache",
+  "types": [
+
+  ],
+  "checksums": {
+    "tmp/lab42-activemq-0.1.2/Modulefile": "a89602c68184348a486b001eaa6d0444",
+    "tmp/lab42-activemq-0.1.2/manifests/monitor/example42.pp": "88a20994aa1b450162ece04290f3b9ca",
+    "tmp/lab42-activemq-0.1.2/manifests/init.pp": "f449774006ab68d24218585337931b77",
+    "tmp/lab42-activemq-0.1.2/manifests/backup/example42.pp": "0310e082463f2efe2664ede020b102aa",
+    "spec/spec_helper.rb": "ca19ec4f451ebc7fdb035b52eae6e909",
+    "manifests/packages.pp": "0ad5d012de6f70c01707e8fd656ce4ff",
+    "tmp/lab42-activemq-0.1.2/tests/disable.pp": "3dde8b477cfebeb7f695c9c03be53b71",
+    "templates/init/activemq": "2ef6e10bd6560e7bc4d41593427269d2",
+    "tmp/lab42-activemq-0.1.2/tests/firewall.pp": "7d3f1039d7a1078d52cd5a8e57832bb2",
+    "tmp/lab42-activemq-0.1.2/manifests/firewall.pp": "8981feaadb4e6f2afebaf61e82719052",
+    "tmp/lab42-activemq-0.1.2/manifests/backup.pp": "0965d926410cdfab0dd1692b3befdc01",
+    "tmp/lab42-activemq-0.1.2/manifests/absent.pp": "d50888eaee443b22e374fa5500cd7609",
+    "templates/default/log4j.properties": "3c7d4093a5bc6f394b16f744ad2d8ebf",
+    "CHANGELOG": "6a31e1c6493314c696fb10ec4413d587",
+    "tmp/lab42-activemq-0.1.2/tests/debug.pp": "cc837180cff4e4aef3d73923f4c0bbfc",
+    "tmp/lab42-activemq-0.1.2/tests/init.pp": "7845e38ce090643401a6ee6756b49f3f",
+    "tmp/lab42-activemq-0.1.2/manifests/disableboot.pp": "7b94010e16bb23765994ed05b9e396cd",
+    "tmp/lab42-activemq-0.1.2/tests/disableboot.pp": "c4a4bbdbcf121799f17787ac3247fc37",
+    "templates/default/activemq.xml": "da0398797801db308ef0e86c871ea13c",
+    "manifests/config.pp": "561173c6b9ec39d81d492833b40b168f",
+    "tmp/lab42-activemq-0.1.2.tar.gz": "ba2ca94e03e66553088b50c544366c83",
+    "tmp/lab42-activemq-0.1.2/tests/absent.pp": "05139788c0ad4e3443c2a0ed76531e7e",
+    "tmp/lab42-activemq-0.1.2/README": "27a563b520352d88292d6f0127804330",
+    "tmp/lab42-activemq-0.1.2/manifests/redhat.pp": "cae6552729586e258830a60572c3865d",
+    "RELEASE_PROCESS.markdown": "30d0e531977f799f33e584548ecd8607",
+    "manifests/service.pp": "8e4028f9d6e5f04f60bff94533bfeb44",
+    "tmp/lab42-activemq-0.1.2/tests/monitor.pp": "0d63bb6678aa65254ebfeb8d3ac9bd18",
+    "tmp/lab42-activemq-0.1.2/templates/variables_activemq.erb": "8a75b010c2db4f8432291767f80f7c6f",
+    "tmp/lab42-activemq-0.1.2/manifests/disable.pp": "038462c49864ec5cc2e720e76ac38266",
+    "tmp/lab42-activemq-0.1.2/manifests/debug.pp": "07e7b8ec902a64750f101cb9c068d3bb",
+    "tests/init.pp": "7845e38ce090643401a6ee6756b49f3f",
+    "templates/default/jetty.xml": "9c4fa380495f068bfc66dea5e4d42777",
+    "templates/default/jetty-realm.properties": "f78c8023b940d90867d45f35dbe2577a",
+    "templates/activemq.xml.erb": "da0398797801db308ef0e86c871ea13c",
+    "tmp/lab42-activemq-0.1.2/templates/activemq.xml.erb": "5be34261020a887b05c6f9d64cce3dd3",
+    "README.markdown": "e1c1dbeb9500bcd4f81494af98986088",
+    "tmp/lab42-activemq-0.1.2/tests/backup.pp": "c5ac311a3e185c6ef82ed0960b581c49",
+    "tmp/lab42-activemq-0.1.2/manifests/monitor.pp": "2c234ab32bb439b018b17ac82ef42f99",
+    "tmp/lab42-activemq-0.1.2/manifests/example42.pp": "1fed7c51ff128b3e9c073cfcf2491700",
+    "spec/spec.opts": "a600ded995d948e393fbe2320ba8e51c",
+    "metadata.json": "d34d0b70aba36510fbc2df4e667479ef",
+    "tmp/lab42-activemq-0.1.2/metadata.json": "f974d5c7acd5e8cca25880490a0bfb45",
+    "tmp/lab42-activemq-0.1.2/manifests/params.pp": "f60656337f94d6e12ba3f3fe92006283",
+    "tmp/lab42-activemq-0.1.2/manifests/conf.pp": "320acaf58d4aa4a41e097849a52a56f7",
+    "templates/default/activemq-wrapper.conf": "3dc5ff6b20dfbc8910cf02e68564ffed",
+    "Modulefile": "9b69fbd59da64b94a069e29a7ecc8ed2",
+    "manifests/init.pp": "d4aab983114dbb5c0f2e376878bbff06"
+  },
+  "summary": "ActiveMQ Puppet Module",
+  "source": "git://github.com/puppetlabs/puppetlabs-activemq",
+  "description": "ActiveMQ Puppet Module",
+  "author": "puppetlabs",
+  "name": "puppetlabs-activemq",
+  "version": "1.0.0",
+  "dependencies": [
+    {
+      "version_requirement": ">= 0.0.1",
+      "name": "puppetlabs/stdlib"
+    },
+    {
+      "version_requirement": ">= 1.0.0",
+      "name": "puppetlabs/java"
+    }
+  ]
+}
