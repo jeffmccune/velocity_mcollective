@@ -1,0 +1,7 @@
+# Managed by Puppet <%= puppetversion %>
+[pupee]
+name=Puppet Enterprise
+baseurl=<%= baseurl_real %>/enterprise/centos/<%= "#{operatingsystemrelease}".split('.')[0] %>/$basearch
+enabled=1
+gpgcheck=0
+

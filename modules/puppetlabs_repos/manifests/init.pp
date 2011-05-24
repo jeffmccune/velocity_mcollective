@@ -34,6 +34,12 @@ class puppetlabs_repos(
   file { '/etc/yum.repos.d/centos.repo':
     content => template("${module_name}/centos.repo.erb"),
   }
+  file { '/etc/yum.repos.d/java.repo':
+    content => template("${module_name}/java.repo.erb"),
+  }
+  file { '/etc/yum.repos.d/pupee.repo':
+    content => template("${module_name}/pupee.repo.erb"),
+  }
 
   exec { 'yum_clean':
     command     => '/usr/bin/yum clean all',

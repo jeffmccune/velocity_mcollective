@@ -16,7 +16,7 @@ Vagrant::Config.run do |config|
   # box = "rhel60_64"
   # box = "centos4_64"
   box = "centos56_64"
-  url = @at_puppetlabs ? "http://faro.puppetlabs.lan/vagrant" : "http://https://puppetlabs.s3.amazonaws.com/pub"
+  url = @at_puppetlabs ? "http://faro.puppetlabs.lan/vagrant" : "https://puppetlabs.s3.amazonaws.com/pub"
 
   # What internal network should these hosts be on? (24 bit network)
   network = "172.20.10"
@@ -25,16 +25,17 @@ Vagrant::Config.run do |config|
   # config.vm.boot_mode = :gui
 
   # This will provision the box using puppet
-  config.vm.provision :puppet do |puppet|
-    puppet.options        = "-v --vardir=/var/lib/puppet --ssldir=/var/lib/puppet/ssl"
-    puppet.module_path    = "modules"
-    puppet.manifests_path = "manifests"
-    puppet.manifest_file  = "site.pp"
-  end
 
   config.vm.define :puppet10 do |node|
     node.vm.box = "#{box}"
     node.vm.box_url = "#{url}/#{box}.box"
+    node.vm.provision :shell, :path => 'shell/puppet10'
+    node.vm.provision :puppet do |puppet|
+      puppet.options        = "-v --vardir=/var/lib/puppet --ssldir=/var/lib/puppet/ssl"
+      puppet.module_path    = "modules"
+      puppet.manifests_path = "manifests"
+      puppet.manifest_file  = "site.pp"
+    end
     node.vm.customize do |vm|
       vm.memory_size = 2048
       vm.cpu_count   = 2
