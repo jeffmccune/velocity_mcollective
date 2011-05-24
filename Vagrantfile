@@ -55,6 +55,13 @@ Vagrant::Config.run do |config|
         vm.memory_size = 384
         vm.cpu_count   = 1
       end
+      node.vm.provision :shell, :path => "shell/www#{offset}"
+      node.vm.provision :puppet do |puppet|
+        puppet.options        = "-v --vardir=/var/lib/puppet --ssldir=/var/lib/puppet/ssl"
+        puppet.module_path    = "modules"
+        puppet.manifests_path = "manifests"
+        puppet.manifest_file  = "site.pp"
+      end
       node.vm.forward_port("ssh", 22, "220#{offset}".to_i)
       node.vm.network("#{network}.#{offset}")
     end
@@ -68,6 +75,13 @@ Vagrant::Config.run do |config|
       node.vm.customize do |vm|
         vm.memory_size = 768
         vm.cpu_count   = 2
+      end
+      node.vm.provision :shell, :path => "shell/db#{offset}"
+      node.vm.provision :puppet do |puppet|
+        puppet.options        = "-v --vardir=/var/lib/puppet --ssldir=/var/lib/puppet/ssl"
+        puppet.module_path    = "modules"
+        puppet.manifests_path = "manifests"
+        puppet.manifest_file  = "site.pp"
       end
       node.vm.forward_port("ssh", 22, "220#{offset}".to_i)
       node.vm.network("#{network}.#{offset}")
