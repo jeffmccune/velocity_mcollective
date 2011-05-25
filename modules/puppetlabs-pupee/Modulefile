@@ -1,0 +1,11 @@
+name    'puppetlabs-pupee'
+version '0.0.1'
+source 'git://github.com/puppetlabs/puppetlabs-pupee.git'
+author 'puppetlabs'
+license 'Apache'
+summary 'Manage Puppet Enterprise Packages'
+description 'Manage Puppet Enterprise Packages'
+project_page 'https://github.com/puppetlabs/puppetlabs-pupee'
+
+## Add dependencies, if any:
+dependency 'puppetlabs/stdlib', '>= 0.1.3'

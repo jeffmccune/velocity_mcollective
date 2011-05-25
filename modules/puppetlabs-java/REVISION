@@ -1,4 +1,4 @@
 module: puppetlabs/java
 version: 1.0.0
-url: file:///Users/jeff/.puppet/var/puppet-module/cache/file-947518d877fb275850a375d795be6a44c27ab526/puppetlabs-java-1.0.0.tar.gz
-installed: Tue May 24 14:10:28 -0700 2011
+url: file:///Users/jeff/.puppet/var/puppet-module/cache/http_forge_puppetlabs_com-75a31f1d6f1ef6eb63b4479b3512ee1508209a7f/puppetlabs-java-1.0.0.tar.gz
+installed: Wed May 25 10:45:02 -0700 2011
