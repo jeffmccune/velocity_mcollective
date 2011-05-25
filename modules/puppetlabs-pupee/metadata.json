@@ -8,6 +8,7 @@
     "spec/spec_helper.rb": "ca19ec4f451ebc7fdb035b52eae6e909",
     "manifests/ruby.pp": "5da2500278e748e22b63a1be2e7fe17c",
     "spec/unit/puppet/provider/README.markdown": "e52668944ee6af2fb5d5b9e798342645",
+    "CHANGELOG": "c5c13fc679f73af690a83e64e1f9bd2c",
     "files/README.markdown": "3d44458cc68d8513b51e3b56c604eec4",
     "tests/init.pp": "6625049370a8b47ccb46e9febcde660b",
     "templates/README.markdown": "aada0a1952329e46b98695349dba6203",
