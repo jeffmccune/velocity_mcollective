@@ -5,6 +5,8 @@ node default {
 
   class { 'puppetlabs_repos': stage => 'setup' }
 
+  class { 'pupee': }
+
 }
 
 node /^puppet/ inherits default {
