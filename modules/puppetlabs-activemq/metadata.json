@@ -18,7 +18,7 @@
     "tmp/lab42-activemq-0.1.2/manifests/backup.pp": "0965d926410cdfab0dd1692b3befdc01",
     "tmp/lab42-activemq-0.1.2/manifests/absent.pp": "d50888eaee443b22e374fa5500cd7609",
     "templates/default/log4j.properties": "3c7d4093a5bc6f394b16f744ad2d8ebf",
-    "CHANGELOG": "2e5cedaf9d04a8eb7742f34cc0f84f01",
+    "CHANGELOG": "620a270f59e8c492f56063b54d8704bd",
     "tmp/lab42-activemq-0.1.2/tests/debug.pp": "cc837180cff4e4aef3d73923f4c0bbfc",
     "tmp/lab42-activemq-0.1.2/tests/init.pp": "7845e38ce090643401a6ee6756b49f3f",
     "tmp/lab42-activemq-0.1.2/manifests/disableboot.pp": "7b94010e16bb23765994ed05b9e396cd",
@@ -30,7 +30,7 @@
     "tmp/lab42-activemq-0.1.2/README": "27a563b520352d88292d6f0127804330",
     "tmp/lab42-activemq-0.1.2/manifests/redhat.pp": "cae6552729586e258830a60572c3865d",
     "RELEASE_PROCESS.markdown": "30d0e531977f799f33e584548ecd8607",
-    "manifests/service.pp": "0244fb094a3cec850bf2c6aac0546c27",
+    "manifests/service.pp": "83246d084b8e59e76054ba565c791104",
     "tmp/lab42-activemq-0.1.2/tests/monitor.pp": "0d63bb6678aa65254ebfeb8d3ac9bd18",
     "tmp/lab42-activemq-0.1.2/templates/variables_activemq.erb": "8a75b010c2db4f8432291767f80f7c6f",
     "tmp/lab42-activemq-0.1.2/manifests/disable.pp": "038462c49864ec5cc2e720e76ac38266",
@@ -50,22 +50,22 @@
     "tmp/lab42-activemq-0.1.2/manifests/params.pp": "f60656337f94d6e12ba3f3fe92006283",
     "tmp/lab42-activemq-0.1.2/manifests/conf.pp": "320acaf58d4aa4a41e097849a52a56f7",
     "templates/default/activemq-wrapper.conf": "3dc5ff6b20dfbc8910cf02e68564ffed",
-    "Modulefile": "65e251a2287d431ae6a3df943780471c",
-    "manifests/init.pp": "4aa57bb9dc3bd551df01a8f86037b675"
+    "Modulefile": "b6f53d66b7ac54daf7940c17273cdc3b",
+    "manifests/init.pp": "972318d6177e7aa21f556e07c54e4443"
   },
   "summary": "ActiveMQ Puppet Module",
   "source": "git://github.com/puppetlabs/puppetlabs-activemq",
   "description": "ActiveMQ Puppet Module",
   "author": "puppetlabs",
   "name": "puppetlabs-activemq",
-  "version": "1.0.1",
+  "version": "0.1.2",
   "dependencies": [
     {
       "version_requirement": ">= 0.0.1",
       "name": "puppetlabs/stdlib"
     },
     {
-      "version_requirement": ">= 1.0.0",
+      "version_requirement": ">= 0.1.0",
       "name": "puppetlabs/java"
     }
   ]
