@@ -25,7 +25,6 @@ Vagrant::Config.run do |config|
   # config.vm.boot_mode = :gui
 
   # This will provision the box using puppet
-
   config.vm.define :puppet10 do |node|
     node.vm.box = "#{box}"
     node.vm.box_url = "#{url}/#{box}.box"
@@ -34,7 +33,7 @@ Vagrant::Config.run do |config|
       puppet.options        = "-v --vardir=/var/lib/puppet --ssldir=/var/lib/puppet/ssl"
       puppet.module_path    = "modules"
       puppet.manifests_path = "manifests"
-      puppet.manifest_file  = "site.pp"
+      puppet.manifest_file  = "vagrant.pp"
     end
     node.vm.customize do |vm|
       vm.memory_size = 2048
@@ -44,6 +43,26 @@ Vagrant::Config.run do |config|
     node.vm.forward_port("dashboard", 3000, 3000)
     node.vm.forward_port("puppet",    8140, 8140)
     node.vm.network("#{network}.10")
+  end
+
+  config.vm.define :puppet11 do |node|
+    node.vm.box = "lucid64"
+    node.vm.box_url = "#{url}/lucid64.box"
+    node.vm.provision :shell, :path => 'shell/puppet10'
+    # node.vm.provision :puppet do |puppet|
+    #   puppet.options        = "-v --vardir=/var/lib/puppet --ssldir=/var/lib/puppet/ssl"
+    #   puppet.module_path    = "modules"
+    #   puppet.manifests_path = "manifests"
+    #   puppet.manifest_file  = "vagrant.pp"
+    # end
+    node.vm.customize do |vm|
+      vm.memory_size = 2048
+      vm.cpu_count   = 2
+    end
+    node.vm.forward_port("ssh", 22, 22011)
+    node.vm.forward_port("dashboard", 3000, 3001)
+    node.vm.forward_port("puppet",    8140, 8141)
+    node.vm.network("#{network}.11")
   end
 
   # Web hosts
@@ -60,7 +79,7 @@ Vagrant::Config.run do |config|
         puppet.options        = "-v --vardir=/var/lib/puppet --ssldir=/var/lib/puppet/ssl"
         puppet.module_path    = "modules"
         puppet.manifests_path = "manifests"
-        puppet.manifest_file  = "site.pp"
+        puppet.manifest_file  = "vagrant.pp"
       end
       node.vm.forward_port("ssh", 22, "220#{offset}".to_i)
       node.vm.network("#{network}.#{offset}")
@@ -81,7 +100,7 @@ Vagrant::Config.run do |config|
         puppet.options        = "-v --vardir=/var/lib/puppet --ssldir=/var/lib/puppet/ssl"
         puppet.module_path    = "modules"
         puppet.manifests_path = "manifests"
-        puppet.manifest_file  = "site.pp"
+        puppet.manifest_file  = "vagrant.pp"
       end
       node.vm.forward_port("ssh", 22, "220#{offset}".to_i)
       node.vm.network("#{network}.#{offset}")
