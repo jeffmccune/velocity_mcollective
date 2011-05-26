@@ -19,10 +19,18 @@
 #
 #   include pupee
 #
-class pupee {
+class pupee ($srcdir='/usr/local/src') {
+
+  validate_re($srcdir, '^/')
+  $srcdir_real = $srcdir
 
   class { 'pupee::ruby':
     stage => 'runtime',
+  }
+  class { 'pupee::envpuppet':
+    require => Class['pupee::ruby'],
+    srcdir  => $srcdir_real,
+    stage   => 'runtime',
   }
 
 }

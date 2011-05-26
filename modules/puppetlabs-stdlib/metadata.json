@@ -7,14 +7,14 @@
   "checksums": {
     "spec/spec_helper.rb": "ca19ec4f451ebc7fdb035b52eae6e909",
     "lib/puppet/parser/functions/validate_re.rb": "b47784856ff536e058b8cf5a46775406",
-    "CHANGELOG": "a1e548b383f11d9f1883eccf234c1449",
-    "manifests/stages.pp": "5bd746c34c0cbb3fe7d27bfa941582e7",
+    "CHANGELOG": "e3153abec4e61ded2071128a90a03f39",
+    "manifests/stages.pp": "8ed6fde27cfe2760395579a0536ec0a4",
     "RELEASE_PROCESS.markdown": "30d0e531977f799f33e584548ecd8607",
     "tests/init.pp": "1d98070412c76824e66db4b7eb74d433",
     "README.markdown": "dbe2ed7059399f57eb7737dc763ee451",
     "spec/spec.opts": "a600ded995d948e393fbe2320ba8e51c",
     "metadata.json": "d34d0b70aba36510fbc2df4e667479ef",
-    "Modulefile": "46211727b1cc00fefebc22a349fc8806",
+    "Modulefile": "210cd1fe7125e876c3cd745c585f3848",
     "manifests/init.pp": "3e441c929ebcb711b2544dd5b90f5baa"
   },
   "summary": "Puppet Module Standard Library",
@@ -22,7 +22,7 @@
   "description": "Standard Library for Puppet Modules",
   "author": "puppetlabs",
   "name": "puppetlabs-stdlib",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "dependencies": [
 
   ]

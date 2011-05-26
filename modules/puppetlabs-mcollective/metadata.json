@@ -1,0 +1,42 @@
+{
+  "project_page": "https://github.com/puppetlabs/puppetlabs-mcollective",
+  "license": "Apache",
+  "types": [
+
+  ],
+  "checksums": {
+    "spec/spec_helper.rb": "ca19ec4f451ebc7fdb035b52eae6e909",
+    "manifests/pkg.pp": "43b12d743259c358925a9baa000acfc7",
+    "manifests/params.pp": "f7fb057b1f2f89dcf2b4c1b642eb95c3",
+    "spec/unit/puppet/provider/README.markdown": "e52668944ee6af2fb5d5b9e798342645",
+    "CHANGELOG": "58f81ac5bc953ef5897e5287c3c40b24",
+    "files/README.markdown": "3d44458cc68d8513b51e3b56c604eec4",
+    "manifests/client.pp": "a9cbd763b121a80f5f24d8f9e40872ed",
+    "templates/client.cfg": "5b7bfb0fec1d25d3542ae65600e5d541",
+    "manifests/service.pp": "69b4b3e2887a9aad894af3167c595c05",
+    "manifests/README.markdown": "b9970454391883e36b55137328792a55",
+    "tests/init.pp": "e030102461581f935feebf989f4d4e0e",
+    "spec/README.markdown": "32a1fc0121c28aff554ef5d422b8b51e",
+    "templates/server.cfg": "ac90496808367e403d1596abf560ae42",
+    "README.markdown": "999df76cfdd2cc8ca42dd0099ca76a2c",
+    "templates/mcollective": "c6ad384a658e3dbb5631b661ba20179b",
+    "spec/spec.opts": "a600ded995d948e393fbe2320ba8e51c",
+    "metadata.json": "d34d0b70aba36510fbc2df4e667479ef",
+    "manifests/plugin.pp": "7c23b64fe58bd3b04281eb7b992d8c34",
+    "spec/unit/puppet/type/README.markdown": "de26a7643813abd6c2e7e28071b1ef94",
+    "Modulefile": "43bed19cf63fead29846cadf736e908e",
+    "manifests/init.pp": "fb02ce1e937e4ce33bc75b370935dfe6"
+  },
+  "summary": "Manage MCollective client and service",
+  "source": "git://github.com/puppetlabs/puppetlabs-mcollective.git",
+  "description": "Manage MCollective client and service",
+  "author": "puppetlabs",
+  "name": "puppetlabs-mcollective",
+  "version": "0.0.2",
+  "dependencies": [
+    {
+      "version_requirement": ">= 0.1.4",
+      "name": "puppetlabs/stdlib"
+    }
+  ]
+}

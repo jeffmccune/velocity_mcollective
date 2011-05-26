@@ -5,27 +5,30 @@
 
   ],
   "checksums": {
+    "templates/envpuppet.erb": "9ae007c17c6a2ccc081ff37b1a07ef40",
     "spec/spec_helper.rb": "ca19ec4f451ebc7fdb035b52eae6e909",
     "manifests/ruby.pp": "5da2500278e748e22b63a1be2e7fe17c",
     "spec/unit/puppet/provider/README.markdown": "e52668944ee6af2fb5d5b9e798342645",
-    "CHANGELOG": "c5c13fc679f73af690a83e64e1f9bd2c",
+    "templates/facter.erb": "59bc9dc2fce4590152fe2607095cb2ae",
+    "manifests/envpuppet.pp": "c40f2b813704ee96878428a0e99262d4",
+    "CHANGELOG": "bb0904db82f2d7a8be5189e40980153c",
     "files/README.markdown": "3d44458cc68d8513b51e3b56c604eec4",
+    "templates/puppet.erb": "0fbf00e016be22b3a9b43c3b97972b59",
     "tests/init.pp": "6625049370a8b47ccb46e9febcde660b",
-    "templates/README.markdown": "aada0a1952329e46b98695349dba6203",
     "spec/README.markdown": "32a1fc0121c28aff554ef5d422b8b51e",
     "README.markdown": "7fbc0a22aad307b67ecc47c383eabf30",
     "spec/spec.opts": "a600ded995d948e393fbe2320ba8e51c",
     "metadata.json": "d34d0b70aba36510fbc2df4e667479ef",
     "spec/unit/puppet/type/README.markdown": "de26a7643813abd6c2e7e28071b1ef94",
-    "Modulefile": "1a9721f9b84839132197c5ba85004af6",
-    "manifests/init.pp": "54c2fa1366059fb343473be559a68343"
+    "Modulefile": "607fb9edec3273d523303da3af47ab06",
+    "manifests/init.pp": "94be86a82140e432601b743c7283678e"
   },
   "summary": "Manage Puppet Enterprise Packages",
   "source": "git://github.com/puppetlabs/puppetlabs-pupee.git",
   "description": "Manage Puppet Enterprise Packages",
   "author": "puppetlabs",
   "name": "puppetlabs-pupee",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "dependencies": [
     {
       "version_requirement": ">= 0.1.3",
