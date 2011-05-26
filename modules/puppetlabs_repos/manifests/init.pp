@@ -40,6 +40,9 @@ class puppetlabs_repos(
   file { '/etc/yum.repos.d/pupee.repo':
     content => template("${module_name}/pupee.repo.erb"),
   }
+  file { '/etc/yum.repos.d/mcollective.repo':
+    content => template("${module_name}/mcollective.repo.erb"),
+  }
 
   exec { 'yum_clean':
     command     => '/usr/bin/yum clean all',
