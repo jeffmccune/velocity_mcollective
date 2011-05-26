@@ -1,4 +1,0 @@
-#! /bin/bash
-
-exec /vagrant/shell/provision.sh puppet10
-

@@ -2,7 +2,7 @@
 # HEADER: by puppet.  While it can still be managed manually, it
 # HEADER: is definitely not recommended.
 127.0.0.1	localhost.localdomain	localhost
-172.20.10.10	puppet10.vagrant.internal	puppet10 puppet stomp
+172.20.10.100	puppet100.vagrant.internal	puppet100 puppet stomp
 172.20.10.21	www21.vagrant.internal	www21
 172.20.10.22	www22.vagrant.internal	www22
 172.20.10.23	www23.vagrant.internal	www23
