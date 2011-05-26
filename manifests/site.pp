@@ -27,10 +27,7 @@ node default {
   # and installs puppet from packages
   class { 'vagrant_puppet': stage => runtime }
 
-  class { 'mcollective':
-    server_config => template("site/server.cfg"),
-    client_config => template("site/client.cfg"),
-  }
+  class { 'mcollective': }
 
 }
 
