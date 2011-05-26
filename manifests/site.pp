@@ -17,6 +17,9 @@ node default {
   include stdlib
   include motd
 
+  # Name resolution for the vagrant network
+  class { 'site': stage => 'setup' }
+
   # Setup yum repositories in an early stage
   class { 'puppetlabs_repos': stage => 'setup' }
 
@@ -24,7 +27,10 @@ node default {
   # and installs puppet from packages
   class { 'vagrant_puppet': stage => runtime }
 
-  include mcollective
+  class { 'mcollective':
+    server_config => template("site/server.cfg"),
+    client_config => template("site/client.cfg"),
+  }
 
 }
 
@@ -32,6 +38,8 @@ node /^puppet/ inherits default {
 
   class { 'java': }
   class { 'activemq': }
+
+  Class['activemq::service'] -> Class['mcollective::service']
 
 }
 
