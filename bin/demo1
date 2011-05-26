@@ -1,0 +1,7 @@
+#! /bin/bash
+set +x
+sudo puppet apply \
+  --graph \
+  --graphdir /vagrant/tmp \
+  --modulepath /vagrant/modules \
+  /vagrant/manifests/site.pp
