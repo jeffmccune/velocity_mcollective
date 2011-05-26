@@ -49,3 +49,49 @@ collection of systems. Attendees will:
 
 TBD
 
+# MCollective Notes #
+
+With the default configuration provided by the Puppet Modules and this Vagrant
+project, try out of the following MCollective actions.
+
+## List Agents (RPC) ##
+
+This command lists parseable output:
+
+    sudo mco rpc rpcutil agent_inventory
+
+## List Agents (Inventory) ##
+
+This command lists human readable output and facts / agents:
+
+    sudo mco inventory puppet10
+
+## Collective Status ##
+
+To obtain statistics for the collective: [More
+Information](http://docs.puppetlabs.com/mcollective/reference/basic/daemon.html)
+
+    [vagrant@puppet10 ~]$ sudo mco controller stats
+    Determining the amount of hosts matching filter for 2 seconds .... 2
+    
+      puppet10> total=12, replies=7, valid=12, invalid=0, filtered=0, passed=12
+         www21> total=12, replies=7, valid=12, invalid=0, filtered=0, passed=12
+    
+    Finished processing 2 / 2 hosts in 62.34 ms
+
+## Reload all agents ##
+
+    [vagrant@puppet10 ~]$ sudo mco controller reload_agents
+    Determining the amount of hosts matching filter for 2 seconds .... 2
+    
+                                    puppet10> reloaded all agents
+                                       www21> reloaded all agents
+    
+    Finished processing 2 / 2 hosts in 195.10 ms
+
+## List a process ##
+
+Note, this requires the sys/proctable gem.
+
+    sudo mco rpc --agent process --action list
+
