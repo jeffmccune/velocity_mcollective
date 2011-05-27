@@ -12,12 +12,4 @@
 #
 class site::packages {
 
-  Package { ensure => installed }
-
-	package { 'nagios-plugins-all': }
-  -> package { 'nagios-plugins-file_age': }
-  -> package { 'nagios-plugins': }
-  -> package { 'nrpe': }
-
-
 }

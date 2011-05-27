@@ -39,6 +39,9 @@ node default {
 
   class { 'mcollective': }
 
+  # NRPE for Monitoring
+  class { 'nrpe_basic': }
+
 }
 
 node /^puppet/ inherits default {

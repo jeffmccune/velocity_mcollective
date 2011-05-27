@@ -1,0 +1,33 @@
+{
+  "project_page": "UNKNOWN",
+  "license": "UNKNOWN",
+  "types": [
+
+  ],
+  "checksums": {
+    "spec/spec_helper.rb": "ca19ec4f451ebc7fdb035b52eae6e909",
+    "manifests/packages.pp": "4c84e6403115d1bc4f36d0c7060b973e",
+    "spec/unit/puppet/provider/README.markdown": "e52668944ee6af2fb5d5b9e798342645",
+    "files/README.markdown": "3d44458cc68d8513b51e3b56c604eec4",
+    "manifests/service.pp": "8697889f72931eb74a4b2e19e29d9485",
+    "manifests/README.markdown": "b9970454391883e36b55137328792a55",
+    "tests/init.pp": "27b4586a865c4ae564f67aa24442de17",
+    "templates/README.markdown": "aada0a1952329e46b98695349dba6203",
+    "spec/README.markdown": "32a1fc0121c28aff554ef5d422b8b51e",
+    "README.markdown": "bc8c51e608dad9de17da3c1b56d70e9f",
+    "spec/spec.opts": "a600ded995d948e393fbe2320ba8e51c",
+    "metadata.json": "d34d0b70aba36510fbc2df4e667479ef",
+    "spec/unit/puppet/type/README.markdown": "de26a7643813abd6c2e7e28071b1ef94",
+    "Modulefile": "1fe9f8ea2f9a11c6ed5f47a10f712bce",
+    "manifests/init.pp": "b39d7317097b5f5e2040a7abe69f2961"
+  },
+  "summary": "UNKNOWN",
+  "source": "UNKNOWN",
+  "description": "UNKNOWN",
+  "author": "jeffmccune",
+  "name": "jeffmccune-nrpe_basic",
+  "version": "0.0.1",
+  "dependencies": [
+
+  ]
+}

@@ -12,8 +12,4 @@
 #
 class site::config {
 
-  notify { "nrpe":
-    message => "Configure nrpe here.",
-  }
-
 }
