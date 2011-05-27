@@ -1,9 +1,11 @@
 #! /bin/bash
 set -e
 set -u
+host=$(hostname)
+mkdir -p /vagrant/tmp/${host}
 set -x
 sudo puppet apply \
   --graph \
-  --graphdir /vagrant/tmp \
+  --graphdir /vagrant/tmp/${host} \
   --modulepath /vagrant/modules \
   /vagrant/manifests/site.pp

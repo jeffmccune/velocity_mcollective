@@ -19,4 +19,14 @@ class site {
     content => template("site/hosts"),
   }
 
+  class { 'site::packages':
+    stage  => 'setup_infra',
+  }
+
+  -> class { 'site::config':
+    stage => 'setup_infra',
+  }
+
+  -> Class['mcollective::service']
+
 }

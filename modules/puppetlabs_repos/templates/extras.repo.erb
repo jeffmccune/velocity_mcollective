@@ -1,0 +1,12 @@
+# Managed by Puppet <%= puppetversion %>
+[nagios]
+name=epel_nagios
+baseurl=<%= baseurl_real %>/nagios/<%= "#{operatingsystemrelease}".split('.')[0] %>/$basearch
+enabled=1
+gpgcheck=0
+
+# [epel]
+# name=epel
+# baseurl=http://fedora-epel.mirror.lstn.net/<%= "#{operatingsystemrelease}".split('.')[0] %>/$basearch
+# enabled=1
+# gpgcheck=0

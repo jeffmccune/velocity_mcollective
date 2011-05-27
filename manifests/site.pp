@@ -10,6 +10,16 @@ class vagrant_puppet {
     ensure => absent,
   }
 
+  file { '/etc/cron.daily/makewhatis.cron':
+    ensure => absent,
+  }
+  file { '/etc/cron.daily/mlocate.cron':
+    ensure => absent,
+  }
+  file { '/etc/cron.daily/rpm':
+    ensure => absent,
+  }
+
 }
 
 node default {
