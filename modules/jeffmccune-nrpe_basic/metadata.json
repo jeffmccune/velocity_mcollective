@@ -5,10 +5,15 @@
 
   ],
   "checksums": {
+    "templates/nrpe-config.erb": "ea15f84560a5745e95381d179027adc6",
     "spec/spec_helper.rb": "ca19ec4f451ebc7fdb035b52eae6e909",
+    "manifests/params.pp": "59a60c966e8306310c699463022ceaa5",
     "manifests/packages.pp": "4c84e6403115d1bc4f36d0c7060b973e",
     "spec/unit/puppet/provider/README.markdown": "e52668944ee6af2fb5d5b9e798342645",
+    "CHANGELOG": "6935354fc959de854b876c58eb00ede4",
+    "manifests/command.pp": "813761da3ae4d756acc197fcb44aca4b",
     "files/README.markdown": "3d44458cc68d8513b51e3b56c604eec4",
+    "manifests/config.pp": "9d7764e79f034c0277364a393c853876",
     "manifests/service.pp": "8697889f72931eb74a4b2e19e29d9485",
     "manifests/README.markdown": "b9970454391883e36b55137328792a55",
     "tests/init.pp": "27b4586a865c4ae564f67aa24442de17",
@@ -18,8 +23,8 @@
     "spec/spec.opts": "a600ded995d948e393fbe2320ba8e51c",
     "metadata.json": "d34d0b70aba36510fbc2df4e667479ef",
     "spec/unit/puppet/type/README.markdown": "de26a7643813abd6c2e7e28071b1ef94",
-    "Modulefile": "1fe9f8ea2f9a11c6ed5f47a10f712bce",
-    "manifests/init.pp": "b39d7317097b5f5e2040a7abe69f2961"
+    "Modulefile": "b55de9e3345c0a45344a9259dad9ecce",
+    "manifests/init.pp": "df66ec03830b1b1a46ddc36e9d746849"
   },
   "summary": "UNKNOWN",
   "source": "UNKNOWN",
@@ -28,6 +33,9 @@
   "name": "jeffmccune-nrpe_basic",
   "version": "0.0.1",
   "dependencies": [
-
+    {
+      "version_requirement": ">= 0.1.3",
+      "name": "puppetlabs/stdlib"
+    }
   ]
 }
