@@ -1,2 +1,5 @@
+2011-05-28 Jeff McCune <jeff@puppetlabs.com> - 0.0.2
+* Fix 2.7 deprecation warning for $architecture
+
 2011-05-26 Jeff McCune <jeff@puppetlabs.com> - 0.0.1
 * Initial working release with MCollective

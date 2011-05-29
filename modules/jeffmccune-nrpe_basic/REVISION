@@ -1,4 +1,4 @@
 module: jeffmccune/nrpe_basic
-version: 0.0.1
-url: file:///Users/jeff/.puppet/var/puppet-module/cache/file-947518d877fb275850a375d795be6a44c27ab526/jeffmccune-nrpe_basic-0.0.1.tar.gz
-installed: Thu May 26 19:53:27 -0700 2011
+version: 0.0.2
+url: file:///Users/jeff/.puppet/var/puppet-module/cache/file-947518d877fb275850a375d795be6a44c27ab526/jeffmccune-nrpe_basic-0.0.2.tar.gz
+installed: Sat May 28 20:41:20 -0700 2011

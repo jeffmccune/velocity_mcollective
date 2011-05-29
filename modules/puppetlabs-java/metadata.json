@@ -7,21 +7,21 @@
   "checksums": {
     "spec/spec_helper.rb": "ca19ec4f451ebc7fdb035b52eae6e909",
     "manifests/jdk_package.pp": "630c454eef38907cbf966da51ff61e0f",
-    "CHANGELOG": "59b44b8012b4b201b781f55d7834f7f6",
+    "CHANGELOG": "82f3ecba9d28f660b06cf549366b8319",
     "manifests/jre_package.pp": "25640ba29139eedea766f8f630069d84",
     "tests/init.pp": "01ed568a64f272ad728054341a562406",
     "README.markdown": "b97b16d7c24de526bd242fa59256322b",
     "spec/spec.opts": "a600ded995d948e393fbe2320ba8e51c",
     "metadata.json": "d34d0b70aba36510fbc2df4e667479ef",
-    "Modulefile": "9e03e6dc898697052c71dd110c0010f0",
-    "manifests/init.pp": "ef27f72bdde65aa7787f7e534d89f435"
+    "Modulefile": "ca77bd78021d51d75cb3a64316e905a8",
+    "manifests/init.pp": "1d62f83a6474f323ccd32cbc3174f948"
   },
   "summary": "Manage the official Java runtime",
   "source": "git://github.com/puppetlabs/puppetlabs-java",
   "description": "Manage the official Java runtime",
   "author": "puppetlabs",
   "name": "puppetlabs-java",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "dependencies": [
     {
       "version_requirement": ">= 0.1.3",

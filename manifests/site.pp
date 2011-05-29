@@ -1,8 +1,8 @@
 class vagrant_puppet {
 
-  package { 'puppet':
-    ensure => 'latest',
-  }
+  /*package { 'puppet':*/
+  /*  ensure => 'latest',*/
+  /*}*/
   file { '/usr/local/bin/puppet':
     ensure => absent,
   }
@@ -37,7 +37,7 @@ node default {
   # and installs puppet from packages
   class { 'vagrant_puppet': stage => runtime }
 
-  class { 'mcollective': }
+  class { 'mcollective': mc_security_psk => 'velocity2011' }
 
   # NRPE for Monitoring
   class { 'nrpe_basic': }
@@ -49,7 +49,7 @@ node /^puppet/ inherits default {
   class { 'java': }
   class { 'activemq': }
 
-  Class['activemq::service'] -> Class['mcollective::service']
+  Class['activemq::service'] -> Class['mcollective']
 
 }
 

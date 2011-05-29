@@ -8,7 +8,7 @@
 #
 # Requires:
 #
-#   Class['stdlib::stages']
+#   Class['java']
 #
 # Sample Usage:
 #
@@ -17,7 +17,7 @@
 # }
 #
 class activemq(
-  $version = '5.5.0-2.el5',
+  $version = 'present',
   $ensure  = 'running'
 ) {
 
@@ -31,17 +31,14 @@ class activemq(
 
   class { 'activemq::packages':
     version => $version_real,
-    stage   => 'setup_infra',
   }
 
   class { 'activemq::config':
-    stage   => 'setup_infra',
     require => Class['activemq::packages'],
   }
 
   class { 'activemq::service':
     ensure  => $ensure_real,
-    stage   => 'deploy_infra',
     require => Class['activemq::config'],
   }
 

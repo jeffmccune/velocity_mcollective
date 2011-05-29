@@ -18,7 +18,7 @@
     "tmp/lab42-activemq-0.1.2/manifests/backup.pp": "0965d926410cdfab0dd1692b3befdc01",
     "tmp/lab42-activemq-0.1.2/manifests/absent.pp": "d50888eaee443b22e374fa5500cd7609",
     "templates/default/log4j.properties": "3c7d4093a5bc6f394b16f744ad2d8ebf",
-    "CHANGELOG": "620a270f59e8c492f56063b54d8704bd",
+    "CHANGELOG": "2e57fd6863b5c69f48d109f55a8b33ee",
     "tmp/lab42-activemq-0.1.2/tests/debug.pp": "cc837180cff4e4aef3d73923f4c0bbfc",
     "tmp/lab42-activemq-0.1.2/tests/init.pp": "7845e38ce090643401a6ee6756b49f3f",
     "tmp/lab42-activemq-0.1.2/manifests/disableboot.pp": "7b94010e16bb23765994ed05b9e396cd",
@@ -50,15 +50,15 @@
     "tmp/lab42-activemq-0.1.2/manifests/params.pp": "f60656337f94d6e12ba3f3fe92006283",
     "tmp/lab42-activemq-0.1.2/manifests/conf.pp": "320acaf58d4aa4a41e097849a52a56f7",
     "templates/default/activemq-wrapper.conf": "3dc5ff6b20dfbc8910cf02e68564ffed",
-    "Modulefile": "b6f53d66b7ac54daf7940c17273cdc3b",
-    "manifests/init.pp": "972318d6177e7aa21f556e07c54e4443"
+    "Modulefile": "bdfdf54d70d5c69fc1feab5a87b14bda",
+    "manifests/init.pp": "2c65069f42fca00582e71cf6aca54eec"
   },
   "summary": "ActiveMQ Puppet Module",
   "source": "git://github.com/puppetlabs/puppetlabs-activemq",
   "description": "ActiveMQ Puppet Module",
   "author": "puppetlabs",
   "name": "puppetlabs-activemq",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "dependencies": [
     {
       "version_requirement": ">= 0.0.1",
