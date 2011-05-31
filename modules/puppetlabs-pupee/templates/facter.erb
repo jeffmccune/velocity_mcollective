@@ -1,8 +1,0 @@
-#! /bin/bash
-set -e
-set -u
-export ENVPUPPET_BASEDIR='<%= srcdir_real %>'
-export PATH='<%= path_real %>'
-eval $(<%= bindir_real %>/envpuppet)
-exec "${ENVPUPPET_BASEDIR}"/facter/bin/facter "$@"
-
