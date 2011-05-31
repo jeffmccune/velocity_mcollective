@@ -1,23 +1,30 @@
 class vagrant_puppet {
 
-  /*package { 'puppet':*/
-  /*  ensure => 'latest',*/
-  /*}*/
-  file { '/usr/local/bin/puppet':
-    ensure => absent,
-  }
-  file { '/usr/local/bin/facter':
-    ensure => absent,
-  }
+  case $operatingsystem {
+    centos, redhat, oel: {
+      package { 'puppet':
+        ensure => 'latest',
+      }
+      file { '/usr/local/bin/puppet':
+        ensure => absent,
+      }
+      file { '/usr/local/bin/facter':
+        ensure => absent,
+      }
 
-  file { '/etc/cron.daily/makewhatis.cron':
-    ensure => absent,
-  }
-  file { '/etc/cron.daily/mlocate.cron':
-    ensure => absent,
-  }
-  file { '/etc/cron.daily/rpm':
-    ensure => absent,
+      file { '/etc/cron.daily/makewhatis.cron':
+        ensure => absent,
+      }
+      file { '/etc/cron.daily/mlocate.cron':
+        ensure => absent,
+      }
+      file { '/etc/cron.daily/rpm':
+        ensure => absent,
+      }
+    }
+    default: {
+      notice("Using pre-installed puppet on $operatingsystem")
+    }
   }
 
 }

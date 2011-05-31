@@ -8,6 +8,8 @@
 #
 # Requires:
 #
+#   Class['stdlib']
+#
 # Sample Usage:
 #
 class puppetlabs_repos(
@@ -16,40 +18,16 @@ class puppetlabs_repos(
 
   $baseurl_real = $baseurl
 
-  File {
-    owner  => '0',
-    group  => '0',
-    mode   => '0644',
-    notify => Exec['yum_clean'],
-  }
-
-  file { '/etc/yum.repos.d':
-    ensure  => directory,
-    recurse => true,
-    purge   => true,
-  }
-  file { '/etc/yum.repos.d/prosvc.repo':
-    content => template("${module_name}/prosvc.repo.erb"),
-  }
-  file { '/etc/yum.repos.d/centos.repo':
-    content => template("${module_name}/centos.repo.erb"),
-  }
-  file { '/etc/yum.repos.d/java.repo':
-    content => template("${module_name}/java.repo.erb"),
-  }
-  file { '/etc/yum.repos.d/pupee.repo':
-    content => template("${module_name}/pupee.repo.erb"),
-  }
-  file { '/etc/yum.repos.d/mcollective.repo':
-    content => template("${module_name}/mcollective.repo.erb"),
-  }
-  file { '/etc/yum.repos.d/extras.repo':
-    content => template("${module_name}/extras.repo.erb"),
-  }
-
-  exec { 'yum_clean':
-    command     => '/usr/bin/yum clean all',
-    refreshonly => true,
+  case $operatingsystem {
+    centos, redhat, oel : {
+      class { 'puppetlabs_repos::redhat':
+        baseurl => $baseurl_real,
+        stage   => setup
+      }
+    }
+    default: {
+      notice("Not managing repositories on operatingsystem $operatingsystem")
+    }
   }
 
 }

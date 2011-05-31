@@ -69,7 +69,7 @@ Vagrant::Config.run do |config|
   # Database hosts
   %w{ 31 32 }.each do |offset|
     config.vm.define "db#{offset}".to_sym do |node|
-      node.vm.box     = "#{box}"
+      node.vm.box     = "lucid64"
       node.vm.box_url = "#{url}/#{box}.box"
       node.vm.customize do |vm|
         vm.memory_size = 768
