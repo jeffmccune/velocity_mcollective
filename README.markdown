@@ -95,3 +95,10 @@ Note, this requires the sys/proctable gem.
 
     sudo mco rpc --agent process --action list
 
+## Nagios Check ##
+
+    sudo mco nrpe check_puppet_run
+
+Note, if you get an error along the lines of "could not find command" then make
+sure the nrpe plugin is using the correct nrpe.d directory.  This defaults to
+/etc/nrpe.d on EL systems and /etc/nagios/nrpe.d on other systems.
