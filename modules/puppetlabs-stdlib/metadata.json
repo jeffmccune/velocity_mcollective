@@ -1,9 +1,7 @@
 {
-  "project_page": "https://github.com/puppetlabs/puppetlabs-stdlib",
   "license": "Apache",
-  "types": [
-
-  ],
+  "source": "git://github.com/puppetlabs/puppetlabs-stdlib",
+  "summary": "Puppet Module Standard Library",
   "checksums": {
     "spec/spec_helper.rb": "ca19ec4f451ebc7fdb035b52eae6e909",
     "lib/puppet/parser/functions/validate_re.rb": "b47784856ff536e058b8cf5a46775406",
@@ -17,13 +15,15 @@
     "Modulefile": "210cd1fe7125e876c3cd745c585f3848",
     "manifests/init.pp": "3e441c929ebcb711b2544dd5b90f5baa"
   },
-  "summary": "Puppet Module Standard Library",
-  "source": "git://github.com/puppetlabs/puppetlabs-stdlib",
-  "description": "Standard Library for Puppet Modules",
-  "author": "puppetlabs",
   "name": "puppetlabs-stdlib",
+  "types": [
+
+  ],
+  "project_page": "https://github.com/puppetlabs/puppetlabs-stdlib",
+  "description": "Standard Library for Puppet Modules",
   "version": "0.1.4",
   "dependencies": [
 
-  ]
+  ],
+  "author": "puppetlabs"
 }

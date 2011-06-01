@@ -13,7 +13,7 @@
 # Sample Usage:
 #
 class puppetlabs_repos(
-  $baseurl = 'http://10.0.2.2/yum'
+  $baseurl = 'http://10.0.2.2'
 ) {
 
   $baseurl_real = $baseurl
@@ -21,8 +21,14 @@ class puppetlabs_repos(
   case $operatingsystem {
     centos, redhat, oel : {
       class { 'puppetlabs_repos::redhat':
-        baseurl => $baseurl_real,
-        stage   => setup
+        baseurl => "${baseurl_real}/yum",
+        stage   => setup,
+      }
+    }
+    debian, ubuntu: {
+      class { 'puppetlabs_repos::debian':
+        baseurl => "${baseurl_real}/apt",
+        stage   => setup,
       }
     }
     default: {

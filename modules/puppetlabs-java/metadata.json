@@ -1,9 +1,7 @@
 {
-  "project_page": "https://github.com/puppetlabs/puppetlabs-java",
   "license": "Apache",
-  "types": [
-
-  ],
+  "source": "git://github.com/puppetlabs/puppetlabs-java",
+  "summary": "Manage the official Java runtime",
   "checksums": {
     "spec/spec_helper.rb": "ca19ec4f451ebc7fdb035b52eae6e909",
     "manifests/jdk_package.pp": "630c454eef38907cbf966da51ff61e0f",
@@ -16,16 +14,18 @@
     "Modulefile": "ca77bd78021d51d75cb3a64316e905a8",
     "manifests/init.pp": "1d62f83a6474f323ccd32cbc3174f948"
   },
-  "summary": "Manage the official Java runtime",
-  "source": "git://github.com/puppetlabs/puppetlabs-java",
-  "description": "Manage the official Java runtime",
-  "author": "puppetlabs",
   "name": "puppetlabs-java",
+  "types": [
+
+  ],
+  "project_page": "https://github.com/puppetlabs/puppetlabs-java",
+  "description": "Manage the official Java runtime",
   "version": "0.1.3",
   "dependencies": [
     {
       "version_requirement": ">= 0.1.3",
       "name": "puppetlabs/stdlib"
     }
-  ]
+  ],
+  "author": "puppetlabs"
 }

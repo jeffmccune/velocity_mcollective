@@ -1,9 +1,7 @@
 {
-  "project_page": "https://github.com/puppetlabs/puppetlabs-activemq",
   "license": "Apache",
-  "types": [
-
-  ],
+  "source": "git://github.com/puppetlabs/puppetlabs-activemq",
+  "summary": "ActiveMQ Puppet Module",
   "checksums": {
     "tmp/lab42-activemq-0.1.2/Modulefile": "a89602c68184348a486b001eaa6d0444",
     "tmp/lab42-activemq-0.1.2/manifests/monitor/example42.pp": "88a20994aa1b450162ece04290f3b9ca",
@@ -53,11 +51,12 @@
     "Modulefile": "07a93f9c1cb2a4555812b1f98065ae06",
     "manifests/init.pp": "986fcb443442b7872c9df2bf284699a0"
   },
-  "summary": "ActiveMQ Puppet Module",
-  "source": "git://github.com/puppetlabs/puppetlabs-activemq",
-  "description": "ActiveMQ Puppet Module",
-  "author": "puppetlabs",
   "name": "puppetlabs-activemq",
+  "types": [
+
+  ],
+  "project_page": "https://github.com/puppetlabs/puppetlabs-activemq",
+  "description": "ActiveMQ Puppet Module",
   "version": "0.1.4",
   "dependencies": [
     {
@@ -68,5 +67,6 @@
       "version_requirement": ">= 0.1.0",
       "name": "puppetlabs/java"
     }
-  ]
+  ],
+  "author": "puppetlabs"
 }

@@ -1,9 +1,7 @@
 {
-  "project_page": "UNKNOWN",
   "license": "UNKNOWN",
-  "types": [
-
-  ],
+  "source": "UNKNOWN",
+  "summary": "UNKNOWN",
   "checksums": {
     "templates/nrpe-config.erb": "ea15f84560a5745e95381d179027adc6",
     "spec/spec_helper.rb": "ca19ec4f451ebc7fdb035b52eae6e909",
@@ -26,16 +24,18 @@
     "Modulefile": "fcde25ca988ffea9a600f3a606c898ab",
     "manifests/init.pp": "df66ec03830b1b1a46ddc36e9d746849"
   },
-  "summary": "UNKNOWN",
-  "source": "UNKNOWN",
-  "description": "UNKNOWN",
-  "author": "jeffmccune",
   "name": "jeffmccune-nrpe_basic",
+  "types": [
+
+  ],
+  "project_page": "UNKNOWN",
+  "description": "UNKNOWN",
   "version": "0.0.2",
   "dependencies": [
     {
       "version_requirement": ">= 0.1.3",
       "name": "puppetlabs/stdlib"
     }
-  ]
+  ],
+  "author": "jeffmccune"
 }
