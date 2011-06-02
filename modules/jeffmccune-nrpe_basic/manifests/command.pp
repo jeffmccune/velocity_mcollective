@@ -19,6 +19,9 @@ define nrpe_basic::command(
   $ensure     = 'present'
 ) {
 
+  # Figure out where command fragments should be dropped
+  $nrpe_dir_real = $nrpe_basic::params::nrpe_dir
+
 # find out the default nagios paths for plugis
   $defaultdir = $::architecture ? {
     "x86_64" => "/usr/lib64/nagios/plugins",
@@ -35,13 +38,13 @@ define nrpe_basic::command(
 
   case $ensure {
     "absent":    {
-      file{"/etc/nrpe.d/${name}.cfg":
+      file{"${nrpe_dir_real}/${name}.cfg":
         ensure => absent,
         notify => Class['nrpe_basic::service'],
       }
     }
     default: {
-      file {"/etc/nrpe.d/${name}.cfg":
+      file {"${nrpe_dir_real}/${name}.cfg":
         owner   => '0',
         group   => '0',
         mode    => '0644',

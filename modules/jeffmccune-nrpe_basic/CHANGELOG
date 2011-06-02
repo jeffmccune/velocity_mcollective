@@ -1,3 +1,6 @@
+2011-06-02 Jeff McCune <jeff@puppetlabs.com> - 0.0.3
+* Add Ubuntu (Lucid) platform support
+
 2011-05-28 Jeff McCune <jeff@puppetlabs.com> - 0.0.2
 * Fix 2.7 deprecation warning for $architecture
 

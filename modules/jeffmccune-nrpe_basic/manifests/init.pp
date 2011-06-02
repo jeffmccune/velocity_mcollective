@@ -11,7 +11,7 @@
 # Sample Usage:
 #
 class nrpe_basic(
-$config = undef
+  $config = undef
 ) {
 
   # JJM This can be any string, but we rely on it being

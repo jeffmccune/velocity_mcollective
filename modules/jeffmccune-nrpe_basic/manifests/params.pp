@@ -15,4 +15,8 @@ class nrpe_basic::params {
     'x86_64' => 'lib64',
     default  => 'lib',
   }
+  $nrpe_dir = $operatingsystem ? {
+    /(?i-mx:centos|fedora|redhat|oel)/ => '/etc/nrpe.d',
+    default                            => '/etc/nagios/nrpe.d',
+  }
 }

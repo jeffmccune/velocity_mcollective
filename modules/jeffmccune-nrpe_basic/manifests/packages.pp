@@ -14,9 +14,21 @@ class nrpe_basic::packages {
 
   Package { ensure => installed }
 
-	package { 'nagios-plugins-all': }
-  -> package { 'nagios-plugins-file_age': }
-  -> package { 'nagios-plugins': }
-  -> package { 'nrpe': }
+  case $operatingsystem {
+    centos, redhat, oel: {
+      package { 'nagios-plugins-all': }
+      -> package { 'nagios-plugins-file_age': }
+      -> package { 'nagios-plugins': }
+      -> package { 'nrpe': }
+    }
+    debian, ubuntu: {
+      package { 'nagios-plugins-basic': }
+      -> package { 'nagios-nrpe-server': }
+    }
+    default: {
+      fail("operatingsystem $operatingsystem is not supported")
+    }
+  }
+
 
 }
