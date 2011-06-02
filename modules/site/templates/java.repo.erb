@@ -1,0 +1,7 @@
+# Managed by Puppet <%= puppetversion %>
+[java]
+name=Java
+baseurl=<%= baseurl_real %>/yum/java/<%= "#{operatingsystemrelease}".split('.')[0] %>/$basearch
+enabled=1
+gpgcheck=0
+

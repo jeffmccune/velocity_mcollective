@@ -1,0 +1,7 @@
+# Managed by Puppet <%= puppetversion %>
+[mcollective]
+name=MCollective
+baseurl=<%= baseurl_real %>/yum/mcollective/<%= "#{operatingsystemrelease}".split('.')[0] %>/stable
+enabled=1
+gpgcheck=0
+

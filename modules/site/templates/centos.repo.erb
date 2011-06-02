@@ -1,7 +1,7 @@
 # Managed by Puppet <%= puppetversion %>
 [centos_os]
 name=CentOS
-baseurl=<%= baseurl_real %>/centos/os/<%= operatingsystemrelease %>/$basearch
+baseurl=<%= baseurl_real %>/yum/centos/os/<%= operatingsystemrelease %>/$basearch
 enabled=1
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-5

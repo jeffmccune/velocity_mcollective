@@ -1,7 +1,7 @@
 # Managed by Puppet <%= puppetversion %>
 [nagios]
 name=epel_nagios
-baseurl=<%= baseurl_real %>/nagios/<%= "#{operatingsystemrelease}".split('.')[0] %>/$basearch
+baseurl=<%= baseurl_real %>/yum/nagios/<%= "#{operatingsystemrelease}".split('.')[0] %>/$basearch
 enabled=1
 gpgcheck=0
 
