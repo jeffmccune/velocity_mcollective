@@ -40,8 +40,12 @@ node puppet100 {
   class { 'nrpe_basic': }
 
   # ActiveMQ needs the Java JDK
-  class { 'java': distribution => 'jdk' }
-  class { 'activemq': }
+  class { 'java':
+    distribution => 'jdk',
+  }
+  class { 'activemq':
+    require => Class['java'],
+  }
 
   Class['activemq::service'] -> Class['mcollective::server::service']
 

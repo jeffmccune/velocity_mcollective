@@ -1,31 +1,29 @@
 {
   "license": "Apache",
-  "source": "git://github.com/puppetlabs/puppetlabs-java",
-  "summary": "Manage the official Java runtime",
-  "checksums": {
-    "spec/spec_helper.rb": "ca19ec4f451ebc7fdb035b52eae6e909",
-    "manifests/jdk_package.pp": "630c454eef38907cbf966da51ff61e0f",
-    "CHANGELOG": "82f3ecba9d28f660b06cf549366b8319",
-    "manifests/jre_package.pp": "25640ba29139eedea766f8f630069d84",
-    "tests/init.pp": "01ed568a64f272ad728054341a562406",
-    "README.markdown": "b97b16d7c24de526bd242fa59256322b",
-    "spec/spec.opts": "a600ded995d948e393fbe2320ba8e51c",
-    "metadata.json": "d34d0b70aba36510fbc2df4e667479ef",
-    "Modulefile": "ca77bd78021d51d75cb3a64316e905a8",
-    "manifests/init.pp": "1d62f83a6474f323ccd32cbc3174f948"
-  },
-  "name": "puppetlabs-java",
   "types": [
 
   ],
   "project_page": "https://github.com/puppetlabs/puppetlabs-java",
+  "summary": "Manage the official Java runtime",
+  "checksums": {
+    "spec/spec_helper.rb": "ca19ec4f451ebc7fdb035b52eae6e909",
+    "CHANGELOG": "09491353cb9111dce09b0b21a37daf68",
+    "tests/init.pp": "01ed568a64f272ad728054341a562406",
+    "README.markdown": "b97b16d7c24de526bd242fa59256322b",
+    "spec/spec.opts": "a600ded995d948e393fbe2320ba8e51c",
+    "metadata.json": "d34d0b70aba36510fbc2df4e667479ef",
+    "Modulefile": "7bec3e25542e4537fffc1d0bbe20d268",
+    "manifests/init.pp": "85b72063da1483489dca37d473451454"
+  },
+  "source": "git://github.com/puppetlabs/puppetlabs-java",
   "description": "Manage the official Java runtime",
-  "version": "0.1.3",
+  "author": "puppetlabs",
+  "name": "puppetlabs-java",
+  "version": "0.1.4",
   "dependencies": [
     {
       "version_requirement": ">= 0.1.3",
       "name": "puppetlabs/stdlib"
     }
-  ],
-  "author": "puppetlabs"
+  ]
 }
