@@ -22,7 +22,7 @@ Vagrant::Config.run do |config|
   network = "172.20.10"
 
   # Boot with a GUI so you can see the screen. (Default is headless)
-  # config.vm.boot_mode = :gui
+  config.vm.boot_mode = :gui
 
   # This will provision the box using puppet
   config.vm.define :puppet100 do |node|
@@ -46,7 +46,8 @@ Vagrant::Config.run do |config|
   end
 
   # Web hosts
-  %w{ 21 22 23 24 }.each do |offset|
+  # %w{ 21 22 23 24 }.each do |offset|
+  %w{ 21 }.each do |offset|
     config.vm.define "www#{offset}".to_sym do |node|
       node.vm.box = "#{box}"
       node.vm.box_url = "#{url}/#{box}.box"
@@ -67,7 +68,7 @@ Vagrant::Config.run do |config|
   end
 
   # Database hosts
-  %w{ 31 32 }.each do |offset|
+  %w{ 41 }.each do |offset|
     config.vm.define "db#{offset}".to_sym do |node|
       node.vm.box     = "lucid64"
       node.vm.box_url = "#{url}/#{box}.box"
