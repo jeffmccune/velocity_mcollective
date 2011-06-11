@@ -22,21 +22,18 @@ class mcollective::server::base(
   $config_file
 ) inherits mcollective::params {
 
-  # Manage the packge (RPM or DEB)
   class { 'mcollective::server::package':
-    version => $version,
-    notify  => Class['mcollective::server::service'],
+    version      => $version,
   }
-
-  # Manage the configuration file
   class { 'mcollective::server::config':
     config      => $config,
     config_file => $config_file,
     require     => Class['mcollective::server::package'],
-    notify      => Class['mcollective::server::service'],
+  }
+  class { 'mcollective::server::service':
+    require => [ Class['mcollective::server::config'],
+                 Class['mcollective::server::package'], ],
   }
 
-  # Manage the service
-  class { 'mcollective::server::service': }
 }
 

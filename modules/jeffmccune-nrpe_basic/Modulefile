@@ -1,5 +1,5 @@
 name    'jeffmccune-nrpe_basic'
-version '0.0.3'
+version '0.0.4'
 source 'git://github.com/jeffmccune/jeffmccune-nrpe_basic.git'
 author 'jeffmccune'
 license 'Apache License Version 2.0'

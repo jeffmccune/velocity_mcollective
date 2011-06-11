@@ -1,4 +1,4 @@
 module: puppetlabs/mcollective
-version: 0.1.6
-url: file:///Users/jeff/.puppet/var/puppet-module/cache/file-947518d877fb275850a375d795be6a44c27ab526/puppetlabs-mcollective-0.1.6.tar.gz
-installed: Sat Jun 11 12:45:40 -0700 2011
+version: 0.1.7
+url: file:///Users/jeff/.puppet/var/puppet-module/cache/file-947518d877fb275850a375d795be6a44c27ab526/puppetlabs-mcollective-0.1.7.tar.gz
+installed: Sat Jun 11 13:48:15 -0700 2011

@@ -19,19 +19,15 @@ class nrpe_basic(
   $config_real = $config
 
   class { 'nrpe_basic::packages':
-    stage  => 'setup_infra',
     notify => Class['nrpe_basic::service'],
   }
 
   class { 'nrpe_basic::config':
-    stage   => 'setup_infra',
     config  => $config_real,
     require => Class['nrpe_basic::packages'],
     notify  => Class['nrpe_basic::service'],
   }
 
-  class { 'nrpe_basic::service':
-    stage => 'deploy_infra',
-  }
+  class { 'nrpe_basic::service': }
 
 }

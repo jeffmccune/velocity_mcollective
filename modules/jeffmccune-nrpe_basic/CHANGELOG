@@ -1,3 +1,6 @@
+2011-06-11 Jeff McCune <jeff@puppetlabs.com> - 0.0.4
+* Remove stages and add check_mcollective command
+
 2011-06-02 Jeff McCune <jeff@puppetlabs.com> - 0.0.3
 * Add Ubuntu (Lucid) platform support
 
