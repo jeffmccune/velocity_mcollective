@@ -1,5 +1,7 @@
 # TODO List #
 
+ * Figure out why a small interval of 3 seconds isn't triggering quickly.
+
  * (SOLVED) Fix this error on the centos hosts:  (The solution is that facter
    is not in the default $LOAD\_PATH when installed into /usr/local/src/facter
    as it is on some vagrant base boxes.)
