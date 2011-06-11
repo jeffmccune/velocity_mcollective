@@ -1,6 +1,6 @@
 # Class: mcollective::plugins
 #
-#   This class deploys the default set of MCollective
+#   This class deploys a base set of MCollective
 #   plugins
 #
 # Parameters:
@@ -15,6 +15,7 @@
 # Sample Usage:
 #
 #   This class is intended to be declared in the mcollective class.
+#   You should not need to declare this class as an end user.
 #
 class mcollective::plugins(
   $plugin_base = $mcollective::params::plugin_base,

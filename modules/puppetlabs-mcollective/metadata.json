@@ -1,7 +1,8 @@
 {
-  "license": "Apache License Version 2.0",
-  "source": "git://github.com/puppetlabs/puppetlabs-mcollective.git",
+  "project_page": "https://github.com/puppetlabs/puppetlabs-mcollective",
   "summary": "Manage MCollective client and service",
+  "source": "git://github.com/puppetlabs/puppetlabs-mcollective.git",
+  "author": "puppetlabs",
   "checksums": {
     "spec/spec_helper.rb": "ca19ec4f451ebc7fdb035b52eae6e909",
     "manifests/params.pp": "ec35b1c334407e6fe7c2ef734ddd6878",
@@ -14,9 +15,9 @@
     "spec/unit/puppet/provider/README.markdown": "e52668944ee6af2fb5d5b9e798342645",
     "files/plugins/security/psk.rb": "193f4548aaedee30a349ec99f829a7fd",
     "files/plugins/registration/meta.rb": "7b738cfefefd1ea51773e3e5cb890731",
-    "templates/server.cfg.erb": "cceeef7bbad8e4f803835665f2f544c0",
+    "templates/server.cfg.erb": "98c73f0ab70bb2ed567bc7c09b687f6f",
     "manifests/server/package.pp": "a447f56d1f0c2ac60e9f53f6f33b3ff1",
-    "manifests/server/config.pp": "2ac0a31c81c83dc7ba186bfc52237c51",
+    "manifests/server/config.pp": "7ef445fb491d4b3565f4bc3aada18017",
     "files/plugins/facts/yaml_facts.rb": "a4861c2164b6e2eff6b12d1d38348fa0",
     "files/plugins/connector/stomp.rb": "f5c519e319a964e7197c7b9fe94e12c4",
     "files/plugins/application/find.rb": "8123fa34e3ee3dd178b8989c69b475bd",
@@ -25,16 +26,15 @@
     "files/plugins/agent/nrpe.rb": "6a57a9e7db0d682afac056a49522a988",
     "CHANGELOG": "f099280cdee021dc39af170ecd47f6e2",
     "TODO.markdown": "a9d4774ee1a9edf1e6608becb954eb4d",
-    "manifests/plugins.pp": "73a5ded95bac39b6e554f0d4944fb7a2",
+    "manifests/plugins.pp": "91100cd018634556b375f7dbf6d0e73b",
     "manifests/plugins/plugin.pp": "90f1136e1ec56b2e887f248297c9cc74",
     "manifests/client/package.pp": "d3366c78397d2e123b1303b6e6734aa1",
     "LICENSE": "2a944942e1496af1886903d274dedb13",
-    "files/plugins/registration/agentlist.rb": "d64d565070e7acf50295b7e8a2aa1f8d",
     "manifests/server/package/debian.pp": "271172ceb663132ea59febdb90c2d13f",
     "files/plugins/security/ssl.rb": "0c42fcd0eb0440a084fcc6d50c79c9f8",
     "files/plugins/agent/service.ddl": "69002f2e5494ccbfd191b0272c2753cf",
     "files/plugins/application/help.rb": "b9c16baaa5739c80c03993f61983d6be",
-    "manifests/server/service.pp": "4cbf11803d0ded55158a59aec86f46c7",
+    "manifests/server/service.pp": "d2e9d50bfa0450659dcf19e436ce2606",
     "manifests/server/package/redhat.pp": "6bef8834fc842cea7cab7e51153bd20a",
     "manifests/README.markdown": "b9970454391883e36b55137328792a55",
     "manifests/client/base.pp": "260835afb0e7e169a181c255f668faea",
@@ -45,7 +45,7 @@
     "files/plugins/facts/facter_facts.rb": "1c39d16557ea71b99884a0df137d8582",
     "files/plugins/audit/logfile.rb": "b121f34be7b466525b70a1256a068278",
     "README.markdown": "ccf388561098ba9d4de8a8669aaa76fa",
-    "manifests/server/base.pp": "72e252a6d18e14ba0c22305977c6e566",
+    "manifests/server/base.pp": "edce233406195e984b51e611ab0903ea",
     "files/plugins/security/aes_security.rb": "0ed733213d35e568a9d0a24902b02e3d",
     "files/plugins/application/inventory.rb": "ee3419cd329350d95d32cdb8ea89ab87",
     "files/plugins/agent/nrpe.ddl": "aeaadcf6eb4128a3a4e44d887f5ec0ad",
@@ -70,7 +70,6 @@
   "types": [
 
   ],
-  "project_page": "https://github.com/puppetlabs/puppetlabs-mcollective",
   "description": "Manage MCollective client and service",
   "version": "0.1.6",
   "dependencies": [
@@ -79,5 +78,5 @@
       "name": "puppetlabs/stdlib"
     }
   ],
-  "author": "puppetlabs"
+  "license": "Apache License Version 2.0"
 }
