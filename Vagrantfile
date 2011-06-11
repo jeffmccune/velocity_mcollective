@@ -45,6 +45,25 @@ Vagrant::Config.run do |config|
     node.vm.network("#{network}.100")
   end
 
+  # The monitoring box will be on Lucid
+  config.vm.define :monitor101 do |node|
+    node.vm.box = "lucid64"
+    node.vm.box_url = "#{url}/#{box}.box"
+    node.vm.provision :shell, :path => 'shell/monitor101'
+    node.vm.provision :puppet do |puppet|
+      puppet.options        = "-v --vardir=/var/lib/puppet --ssldir=/var/lib/puppet/ssl"
+      puppet.module_path    = "modules"
+      puppet.manifests_path = "manifests"
+      puppet.manifest_file  = "vagrant.pp"
+    end
+    node.vm.customize do |vm|
+      vm.memory_size = 2048
+      vm.cpu_count   = 1
+    end
+    node.vm.forward_port("ssh", 22, 22101)
+    node.vm.network("#{network}.101")
+  end
+
   # Web hosts
   # %w{ 21 22 23 24 }.each do |offset|
   %w{ 21 }.each do |offset|
