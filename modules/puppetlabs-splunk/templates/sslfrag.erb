@@ -1,0 +1,9 @@
+
+[SSL]
+serverCert = <%= server_cert %>
+password = <%= password %>
+rootCA = <%= root_ca %>
+<%= if dhfile != ''
+  then "dhfile = #{dhfile}"
+end -%>
+requireClientCert = <%= validate_client %>

@@ -61,6 +61,7 @@ Vagrant::Config.run do |config|
       vm.cpu_count   = 1
     end
     node.vm.forward_port("ssh", 22, 22101)
+    node.vm.forward_port("splunk", 8000, 8000)
     node.vm.network("#{network}.101")
   end
 

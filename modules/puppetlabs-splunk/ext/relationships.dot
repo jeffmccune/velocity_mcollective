@@ -1,0 +1,86 @@
+digraph Relationships {
+    label = "Relationships"
+    "Package[splunk]" [
+        fontsize = 8,
+        label = "Package[splunk]"
+    ]
+
+    "Schedule[weekly]" [
+        fontsize = 8,
+        label = "Schedule[weekly]"
+    ]
+
+    "Group[splunk]" [
+        fontsize = 8,
+        label = "Group[splunk]"
+    ]
+
+    "Schedule[daily]" [
+        fontsize = 8,
+        label = "Schedule[daily]"
+    ]
+
+    "Schedule[hourly]" [
+        fontsize = 8,
+        label = "Schedule[hourly]"
+    ]
+
+    "Class[Splunk::Package]" [
+        fontsize = 8,
+        label = "Class[Splunk::Package]"
+    ]
+
+    "Stage[main]" [
+        fontsize = 8,
+        label = "Stage[main]"
+    ]
+
+    "Schedule[never]" [
+        fontsize = 8,
+        label = "Schedule[never]"
+    ]
+
+    "Class[Main]" [
+        fontsize = 8,
+        label = "Class[Main]"
+    ]
+
+    "Class[Splunk::Users]" [
+        fontsize = 8,
+        label = "Class[Splunk::Users]"
+    ]
+
+    "User[splunk]" [
+        fontsize = 8,
+        label = "User[splunk]"
+    ]
+
+    "Class[Settings]" [
+        fontsize = 8,
+        label = "Class[Settings]"
+    ]
+
+    "Schedule[puppet]" [
+        fontsize = 8,
+        label = "Schedule[puppet]"
+    ]
+
+    "Schedule[monthly]" [
+        fontsize = 8,
+        label = "Schedule[monthly]"
+    ]
+
+    "Filebucket[puppet]" [
+        fontsize = 8,
+        label = "Filebucket[puppet]"
+    ]
+
+    "Group[splunk]" -> "User[splunk]" [
+        fontsize = 8
+    ]
+
+    "User[splunk]" -> "Package[splunk]" [
+        fontsize = 8
+    ]
+
+}
