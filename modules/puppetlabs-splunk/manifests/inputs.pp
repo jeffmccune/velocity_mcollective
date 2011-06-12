@@ -24,12 +24,16 @@ class splunk::inputs(
 		app_id    => $app_id,
   }
 
+  # We explicitly declare the relationship to the parent directory
+  # because it appears a require metaparameter overrides the implicit
+  # dependency entirely.
   file { "${splunk::app::apppath}/${app_id}/default/inputs.conf":
     source  => "${splunk::fragpath}/${app_id}/inputs",
     mode    => '0644',
     owner   => 'splunk',
     group   => 'splunk',
-    require => File["${splunk::fragpath}/${app_id}/inputs"],
+    require => [ File["${splunk::fragpath}/${app_id}/inputs"],
+                 File["${splunk::app::apppath}/${app_id}/default"], ],
     notify  => Service['splunk'],
   }
 

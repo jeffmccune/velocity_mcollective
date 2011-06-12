@@ -20,7 +20,7 @@
     "tests/splunk-4.1.6-89596-linux-2.6-x86_64.rpm": "49db9ac14928d41897a540ab064c6e47",
     "templates/sslfrag.erb": "c2bbf1951ac10c8b6573244d05018ece",
     "templates/groupfrag.erb": "7da3e87cbafd4c5e076d05be82e77945",
-    "manifests/inputs.pp": "b3b300722dc7411c994efe1eb4e285b9",
+    "manifests/inputs.pp": "194a30160b72ad43bb3b220e7d593150",
     "manifests/inputs/receiver.pp": "3198064b277274090c54d3843ef8ec2a",
     "tests/site.pp": "ee346ea063e026f8c3c1cc034476757a",
     "manifests/outputs/global.pp": "33e98673aee4488eb8713bf82c2320c1",
