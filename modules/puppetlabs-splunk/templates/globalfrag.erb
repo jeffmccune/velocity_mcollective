@@ -1,0 +1,31 @@
+
+<%= "[tcpout]" %>
+<%= if default_group != ''
+  then "defaultGroup = #{default_group}\n"
+end -%>
+<%= if enable == false
+  then "disabled = true\n"
+end -%>
+indexAndForward = <%= index_forward %>
+sendCookedData = <%= send_cooked %>
+compressed = <%= compress %>
+maxQueueSize = <%= max_queue %>
+autoLB = <%= auto_lb %>
+<%= if ssl_cert != ''
+  then "sslCertPath = #{ssl_cert}\n"
+end -%>
+<%= if ssl_cert != '' and password != ''
+  then "sslPassword = #{password}\n"
+end -%>
+<%= if root_ca != ''
+  then "sslRootCAPath = #{root_ca}\n"
+end -%>
+<%= if validate_server == true
+  then "sslVerifyServerCert = true\n"
+end -%>
+<%= if validate_server == true and cn_check != ''
+  then "sslCommonNameToCheck = #{cn_check}\n"
+end -%>
+<%= if validate_server == true and cnalt_check != ''
+  then "altCommonNameToCheck = #{cnalt_check}\n"
+end -%>

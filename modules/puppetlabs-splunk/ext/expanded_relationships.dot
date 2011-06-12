@@ -1,0 +1,61 @@
+digraph Expanded_relationships {
+    label = "Expanded_relationships"
+    "Package[splunk]" [
+        fontsize = 8,
+        label = "Package[splunk]"
+    ]
+
+    "Schedule[weekly]" [
+        fontsize = 8,
+        label = "Schedule[weekly]"
+    ]
+
+    "Group[splunk]" [
+        fontsize = 8,
+        label = "Group[splunk]"
+    ]
+
+    "Schedule[daily]" [
+        fontsize = 8,
+        label = "Schedule[daily]"
+    ]
+
+    "Schedule[hourly]" [
+        fontsize = 8,
+        label = "Schedule[hourly]"
+    ]
+
+    "Schedule[never]" [
+        fontsize = 8,
+        label = "Schedule[never]"
+    ]
+
+    "User[splunk]" [
+        fontsize = 8,
+        label = "User[splunk]"
+    ]
+
+    "Schedule[puppet]" [
+        fontsize = 8,
+        label = "Schedule[puppet]"
+    ]
+
+    "Schedule[monthly]" [
+        fontsize = 8,
+        label = "Schedule[monthly]"
+    ]
+
+    "Filebucket[puppet]" [
+        fontsize = 8,
+        label = "Filebucket[puppet]"
+    ]
+
+    "Group[splunk]" -> "User[splunk]" [
+        fontsize = 8
+    ]
+
+    "User[splunk]" -> "Package[splunk]" [
+        fontsize = 8
+    ]
+
+}
