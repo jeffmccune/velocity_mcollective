@@ -1,5 +1,10 @@
 # TODO List #
 
+ * Make sure the nodes work with no internet connection.
+   * puppet100 is hanging installing Facter.
+   * All repositories should be disabled prior to installing
+     packages.  Maybe File[..] -> Package <||>
+
  * Figure out why a small interval of 3 seconds isn't triggering quickly.
 
  * (SOLVED) Fix this error on the centos hosts:  (The solution is that facter

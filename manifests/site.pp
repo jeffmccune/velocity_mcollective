@@ -6,7 +6,6 @@ node default {
   # Name resolution for the vagrant network
   class { 'site':
     baseurl => 'http://10.0.2.2',
-    stage   => 'setup',
   }
 
   # This is how users manage different platforms and configuration files
@@ -46,7 +45,6 @@ node puppet100 {
   # Name resolution for the vagrant network
   class { 'site':
     baseurl => 'http://10.0.2.2',
-    stage   => 'setup',
   }
 
   # This is how users manage different platforms and configuration files
@@ -97,7 +95,6 @@ node monitor101 {
   # Name resolution for the vagrant network
   class { 'site':
     baseurl => 'http://10.0.2.2',
-    stage   => 'setup',
   }
 
   # This is how users manage different platforms and configuration files
