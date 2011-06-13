@@ -47,7 +47,8 @@ Vagrant::Config.run do |config|
 
   # The monitoring box will be on Lucid
   config.vm.define :monitor101 do |node|
-    node.vm.box = "lucid64"
+    # node.vm.box = "lucid64"
+    node.vm.box = "centos56_64"
     node.vm.box_url = "#{url}/#{box}.box"
     node.vm.provision :shell, :path => 'shell/monitor101'
     node.vm.provision :puppet do |puppet|
