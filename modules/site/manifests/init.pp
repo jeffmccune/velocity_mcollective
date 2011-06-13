@@ -102,6 +102,16 @@ class site(
         refreshonly => true,
       }
 
+      file { '/var/tmp/RPM-GPG-KEY-prosvc':
+        content => template("${module_name}/RPM-GPG-KEY-prosvc"),
+      }
+
+      exec { 'yum_prosvc_key':
+        command => '/bin/rpm --import /var/tmp/RPM-GPG-KEY-prosvc',
+        unless  => '/bin/rpm -q gpg-pubkey-ed41696e-4d9dfc86',
+        require => File['/var/tmp/RPM-GPG-KEY-prosvc'],
+      }
+
     }
 
   }
