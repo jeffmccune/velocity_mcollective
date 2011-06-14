@@ -11,7 +11,7 @@
 # Sample Usage:
 #
 class site(
-  $baseurl = 'http://10.0.2.2'
+  $baseurl = 'http://www',
 ) {
 
   validate_re($baseurl, '^http://')

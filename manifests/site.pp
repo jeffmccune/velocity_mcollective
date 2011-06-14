@@ -4,9 +4,7 @@ node default {
   include motd
 
   # Name resolution for the vagrant network
-  class { 'site':
-    baseurl => 'http://10.0.2.2',
-  }
+  class { 'site': baseurl => 'http://www' }
 
   # This is how users manage different platforms and configuration files
   # Another candidate for hiera
@@ -43,9 +41,7 @@ node puppet100 {
   include motd
 
   # Name resolution for the vagrant network
-  class { 'site':
-    baseurl => 'http://10.0.2.2',
-  }
+  class { 'site': baseurl => 'http://www' }
 
   # This is how users manage different platforms and configuration files
   # Another candidate for hiera
@@ -93,9 +89,7 @@ node monitor101 {
   include motd
 
   # Name resolution for the vagrant network
-  class { 'site':
-    baseurl => 'http://10.0.2.2',
-  }
+  class { 'site': baseurl => 'http://www' }
 
   # This is how users manage different platforms and configuration files
   # Another candidate for hiera
