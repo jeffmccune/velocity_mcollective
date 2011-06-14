@@ -109,7 +109,7 @@ class site(
       }
 
       file { '/var/tmp/RPM-GPG-KEY-prosvc':
-        content => template("${module_name}/RPM-GPG-KEY-prosvc"),
+        content => $prosvc_key
       }
 
       exec { 'yum_prosvc_key':
