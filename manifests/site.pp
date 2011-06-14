@@ -119,4 +119,11 @@ node monitor101 {
     require    => Nrpe_basic::Command['check_mcollective'],
   }
 
+  # Add the check-mc-nrpe nagios check script.
+  # This should only be installed on the monitoring system.
+  class { 'site::check_mc_nrpe':
+    require => [ Class['nrpe_basic'],
+                 Class['mcollective'], ],
+  }
+
 }
