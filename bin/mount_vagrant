@@ -1,0 +1,10 @@
+#! /bin/bash
+#
+
+set -e
+set -u
+
+# Get the Mac's IP address
+hypervisor="$(netstat -nr | awk '$1 ~ /0.0.0.0/ { print $2 }' | perl -ple 's/\.\d+$/.1/')"
+
+mount ${hypervisor}:/Users/jeff/vms/${1:-velocity} /vagrant
