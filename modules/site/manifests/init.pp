@@ -12,6 +12,7 @@
 #
 class site(
   $baseurl = 'http://www',
+  $manage_hosts = false
 ) {
 
   validate_re($baseurl, '^http://')
@@ -23,16 +24,21 @@ class site(
     mode   => '0644',
   }
 
+  $distribution = inline_template("<%= '${operatingsystem}'.downcase %>")
+  $codename     = inline_template("<%= '${lsbdistcodename}'.downcase %>")
+  $prosvc_key   = template("${module_name}/APT-GPG-KEY-prosvc")
+
+  if $manage_hosts {
+    $hosts_content = template("site/hosts")
+  } else {
+    $hosts_content = undef
+  }
   file { '/etc/hosts':
     owner   => '0',
     group   => '0',
     mode    => '0644',
-    content => template("site/hosts"),
+    content => $hosts_content
   }
-
-  $distribution = inline_template("<%= '${operatingsystem}'.downcase %>")
-  $codename     = inline_template("<%= '${lsbdistcodename}'.downcase %>")
-  $prosvc_key   = template("${module_name}/APT-GPG-KEY-prosvc")
 
   case $operatingsystem {
     ubuntu: {
