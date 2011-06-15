@@ -20,4 +20,13 @@ class site::check_mc_nrpe {
     content => template('site/mcollective/sbin/check-mc-nrpe'),
   }
 
+  # Hack since puppet apply doesn't write classes.txt
+  file { '/var/lib/puppet/state/classes.txt':
+    ensure  => file,
+    owner   => '0',
+    group   => '0',
+    mode    => '0644',
+    content => "monitor\n",
+  }
+
 }
